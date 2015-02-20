@@ -1,0 +1,7 @@
+# This file contains additional build requirements that did not get
+# picked up automatically. One name per line, no whitespace.
+libjpeg-turbo-dev
+pkgconfig(zlib)
+freetype-dev
+tiff-dev
+nose
