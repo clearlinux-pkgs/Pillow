@@ -4,7 +4,7 @@
 #
 Name     : Pillow
 Version  : 2.9.0
-Release  : 12
+Release  : 13
 URL      : https://pypi.python.org/packages/source/P/Pillow/Pillow-2.9.0.tar.gz
 Source0  : https://pypi.python.org/packages/source/P/Pillow/Pillow-2.9.0.tar.gz
 Summary  : Python Imaging Library (Fork)
