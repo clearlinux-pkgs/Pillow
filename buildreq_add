@@ -5,3 +5,8 @@ pkgconfig(zlib)
 freetype-dev
 tiff-dev
 nose
+nose-python
+Sphinx-python
+pyflakes-python
+pep8
+
