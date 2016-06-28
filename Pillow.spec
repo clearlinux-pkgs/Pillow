@@ -4,7 +4,7 @@
 #
 Name     : Pillow
 Version  : 3.1.1
-Release  : 21
+Release  : 22
 URL      : https://pypi.python.org/packages/source/P/Pillow/Pillow-3.1.1.tar.gz
 Source0  : https://pypi.python.org/packages/source/P/Pillow/Pillow-3.1.1.tar.gz
 Summary  : Python Imaging Library (Fork)
