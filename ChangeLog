@@ -1,13 +1,353 @@
 Changelog (Pillow)
 ==================
 
+3.3.0 (2016-07-01)
+------------------
+
+- Fixed enums for Resolution Unit and Predictor in TiffTags.py #1998
+  [wiredfool]
+
+- Fix issue converting P mode to LA #1986
+  [didrix]
+  
+- Moved test_j2k_overflow to check_j2k_overflow, prevent DOS of our 32bit testing machines #1995
+  [wiredfool]
+
+- Skip CRC checks in PNG files when LOAD_TRUNCATED_IMAGES is enabled #1991
+  [kkopachev]
+
+- Added CMYK mode for opening EPS files #1826
+  [radarhere]
+
+- Docs: OSX build instruction clarification #1994
+  [wiredfool]
+
+- Docs: Filter comparison table #1993
+  [homm]
+
+- Removal of pthread based Incremental.c, new interface for file decoders/encoders to access the python file. Fixes assorted J2k Hangs. #1934
+  [wiredfool]
+
+- Skip unnecessary passes when resizing #1954
+  [homm]
+
+- Removed duplicate code in ImagePalette #1832
+  [radarhere]
+
+- test_imagecms: Reduce precision of extended info due to 32 bit machine precision #1990
+  [AbdealiJK]
+  
+- Binary Tiff Metadata/ICC profile. #1988
+  [wiredfool]
+  
+- Ignore large text blocks in PNG if LOAD_TRUNCATED_IMAGES is enabled #1970
+  [homm]
+
+- Replace index = index+1 in docs with +=1
+  [cclauss]
+
+- Skip extra 0xff00 in jpeg #1977
+  [kkopachev]
+  
+- Use bytearray for palette mutable storage #1985
+  [radarhere, wiredfool]
+
+- Added additional uint modes for Image.fromarray, more extensive tests of fromarray #1984
+  [mairsbw, wiredfool]
+
+- Fix for program importing PyQt4 when PyQt5 also installed #1942
+  [hugovk]
+
+- Changed depends/install_*.sh urls to point to github pillow-depends repo #1983
+  [wiredfool]
+  
+- Allow ICC profile from `encoderinfo` while saving PNGs #1909
+  [homm]
+
+- Fix integer overflow on ILP32 systems (32-bit Linux). #1975
+  [lambdafu]
+
+- Change function declaration to match Tcl_CmdProc type #1966
+  [homm]
+
+- Integer overflow checks on all calls to *alloc #1781
+  [wiredfool]
+
+- Change equals method on Image so it short circuits #1967
+  [mattBoros]
+ 
+- Runtime loading of TCL/TK libraries, eliminating build time dependency. #1932
+  [matthew-brett]
+
+- Cleanup of transform methods #1941
+  [homm]
+
+- Fix "Fatal Python error: UNREF invalid object" in debug builds #1936
+  [wiredfool]
+
+- Setup fixes for Alpine linux #1937
+  [wiredfool]
+
+- Split resample into horizontal + vertical passes #1933
+  [homm]
+
+- Box blur with premultiplied alpha #1914
+  [homm]
+
+- Add libimagequant support in quantize() #1889
+  [rr-]
+
+- Added internal Premultiplied luminosity (La) mode #1912
+  [homm]
+
+- Fixed point integer resample #1881
+  [homm]
+
+- Removed docs/BUILDME script #1924
+  [radarhere]
+
+- Moved comments to docstrings  #1926
+  [hugovk]
+
+- Include Python.h before wchar.h so _GNU_SOURCE is set consistently #1906
+  [hugovk]
+
+- Updated example decoder in documentation #1899
+  [radarhere]
+
+- Added support for GIF comment extension #1896
+  [radarhere]
+
+- Removed support for pre- 1.5.2 list form of Image info in Image.new #1897
+  [radarhere]
+
+- Fix typos in TIFF tags #1918
+  [radarhere]
+
+- Skip tests that require libtiff if it is not installed, fixes #1866
+  [wiredfool]
+
+- Skip test when icc profile is not available, fixes #1887
+  [doko42]
+
+- Make deprecated functions raise NotImplementedError instead of Exception. #1862, #1890
+  [daniel-leicht, radarhere]
+
+- Replaced os.system with subprocess.call in setup.py #1879
+  [radarhere]
+
+- Corrected Image show documentation #1886
+  [radarhere]
+
+- Added check for executable permissions to ImageShow #1880
+  [radarhere]
+
+- Fixed tutorial code and added explanation #1877
+  [radarhere]
+
+- Added OS X support for ImageGrab grabclipboard #1837
+  [radarhere]
+
+- Combined duplicate code in ImageTk #1856
+  [radarhere]
+
+- Added --disable-platform-guessing option to setup.py build extension, #1861
+  [angeloc]
+
+- Fixed loading Transparent PNGs with a transparent black color #1840
+  [olt]
+
+- Add support for LA mode in Image.fromarray #1865
+  [pierriko]
+
+- Make ImageFile load images in read-only mode #1864
+  [hdante]
+
+- Added _accept hook for XVThumbImagePlugin #1853
+  [radarhere]
+
+- Test TIFF with LZW compression #1855, TGA RLE file #1854
+  [hugovk]
+
+- Improved SpiderImagePlugin help text #1863
+  [radarhere]
+
+- Updated Sphinx project description #1870
+  [radarhere]
+
+- Remove support for Python 3.0 from _imaging.c #1851
+  [radarhere]
+
+- Jpeg qtables are unsigned chars #1814, #1921
+  [thebostik]
+
+- Added additional EXIF tags #1841, TIFF Tags #1821
+  [radarhere]
+
+- Changed documentation to refer to ImageSequence Iterator #1833
+  [radarhere]
+
+- Fix Fedora prerequisites in installation docs, depends script #1842
+  [living180]
+
+- Added _accept hook for PixarImagePlugin #1843
+  [radarhere]
+
+- Removed outdated scanner classifier #1823
+  [radarhere]
+
+- Combined identical error messages in _imaging #1825
+  [radarhere]
+
+- Added debug option for setup.py to trace header and library finding #1790
+  [wiredfool]
+
+- Fix doc building on travis #1820, #1844
+  [wiredfool]
+
+- Fix for DIB/BMP images #1813, #1847
+  [wiredfool]
+
+- Add PixarImagePlugin file extension #1809
+  [radarhere]
+
+- Catch struct.errors when verifying png files #1805
+  [wiredfool]
+
+- SpiderImagePlugin: raise an error when seeking in a non-stack file #1794
+  [radarhere, jmichalon]
+
+- Added Support for 2/4 bpp Tiff Grayscale Images #1789
+  [zwhfly]
+
+- Removed unused variable from selftest #1788
+  [radarhere]
+
+- Added warning for as_dict method (deprecated in 3.0.0) #1799
+  [radarhere]
+
+- Removed powf support for older Python versions #1784
+  [radarhere]
+
+- Health fixes #1625 #1903
+  [radarhere]
+
+3.2.0 (2016-04-01)
+------------------
+
+- Added install docs for Fedora 23 and FreeBSD #1729, #1739, #1792
+  [koobs, zandermartin, wiredfool]
+  
+- Fixed TIFF multiframe load when the frames have different compression types #1782
+  [radarhere, geka000]
+
+- Added __copy__ method to Image #1772
+  [radarhere]
+
+- Updated dates in PIL license in OleFileIO README  #1787
+  [radarhere]
+  
+- Corrected Tiff tag names #1786
+  [radarhere]
+
+- Fixed documented name of JPEG property #1783
+  [radarhere]
+
+- Fixed UnboundLocalError when loading a corrupt jpeg2k file #1780
+  [wiredfool]
+
+- Fixed integer overflow in path.c #1773
+  [wiredfool, nedwill]
+
+- Added debug to command line help text for pilprint #1766
+  [radarhere]
+
+- Expose many more fields in ICC Profiles #1756
+  [lambdafu]
+
+- Documentation changes, URL update, transpose, release checklist
+  [radarhere]
+
+- Fixed saving to nonexistant files specified by pathlib.Path objects, fixes #1747
+  [radarhere]
+
+- Round Image.crop arguments to the nearest integer, fixes #1744
+  [hugovk]
+
+- Fix uninitialized variable warning in _imaging.c:getink, fixes #486
+  [wiredfool]
+
+- Disable multiprocessing install on cygwin, fixes #1690
+  [wiredfool]
+
+- Fix the error reported when libz is not found #1764
+  [wiredfool]
+
+- More general error check to avoid Symbol not found: _PyUnicodeUCS2_AsLatin1String on OS X #1761
+  [wiredfool]
+
+- Added py35 to tox envlist #1724
+  [radarhere]
+
+- Fix EXIF tag name typos #1736
+  [zarlant, radarhere]
+
+- Updated freetype to 2.6.3, Tk/Tcl to 8.6.5 and 8.5.19
+  [radarhere]
+
+- Add a loader for the FTEX format from Independence War 2: Edge of Chaos #1688
+  [jleclanche]
+  
+- Improved alpha_composite documentation #1698
+  [radarhere]
+
+- Extend ImageDraw.text method to pass on multiline_text method specific arguments #1647
+  [radarhere]
+
+- Allow ImageSequence to seek to zero #1686
+  [radarhere]
+
+- ImageSequence Iterator is now an iterator #1649
+  [radarhere]
+
+- Updated windows test builds to jpeg9b
+  [radarhere]
+
+- Fixed support for .gbr version 1 images, added support for version 2 in GbrImagePlugin #1653
+  [wiredfool]
+  
+- Clarified which YCbCr format is used #1677
+  [radarhere]
+
+- Added TiffTags documentation, Moved windows build documentation to winbuild/ #1667
+  [wiredfool]
+
+- Add tests for OLE file based formats #1678
+  [radarhere]
+
+- Add TIFF IFD test #1671
+  [radarhere]
+
+- Add a basic DDS image plugin with more tests #1654
+  [jleclanche, hugovk, wiredfool]
+
+- Fix incorrect conditional in encode.c #1638
+  [manisandro]
+
+
+3.1.2 (2016-04-01)
+------------------
+
+- Fixed an integer overflow in Jpeg2KEncode.c causing a buffer overflow. CVE-2016-3076
+  [wiredfool]
+
 3.1.1 (2016-02-04)
 ------------------
 
-- Fixed an integer overflow in Resample.c causing writes in the Python heap. 
+- Fixed an integer overflow in Resample.c causing writes in the Python heap.
   [nedwill]
 
-- Fixed a buffer overflow in PcdDecode.c causing a segfault when opening PhotoCD files. CVE-2016-TBD
+- Fixed a buffer overflow in PcdDecode.c causing a segfault when opening PhotoCD files. CVE-2016-2533
   [wiredfool]
 
 - Fixed a buffer overflow in FliDecode.c causing a segfault when opening FLI files. CVE-2016-0775
@@ -15,6 +355,7 @@ Changelog (Pillow)
 
 - Fixed a buffer overflow in TiffDecode.c causing an arbitrary amount of memory to be overwritten when opening a specially crafted invalid TIFF file. CVE-2016-0740
   [wiredfool]
+
 
 3.1.0 (2016-01-04)
 ------------------
@@ -1200,7 +1541,7 @@ Changelog (Pillow)
 
 - Use PyCapsule for py3.1, fixes #237.
 
-- Workaround for: http://bugs.python.org/16754 in 3.2.x < 3.2.4 and 3.3.0.
+- Workaround for: http://bugs.python.org/issue16754 in 3.2.x < 3.2.4 and 3.3.0.
 
 2.0.0 (2013-03-15)
 ------------------
@@ -2368,7 +2709,7 @@ Pre-fork
     + Added experimental "RGBa" mode support.
 
       An "RGBa" image is an RGBA image where the colour components
-      have have been premultipled with the alpha value.  PIL allows
+      have have been premultiplied with the alpha value.  PIL allows
       you to convert an RGBA image to an RGBa image, and to paste
       RGBa images on top of RGB images.  Since this saves a bunch
       of multiplications and shifts, it is typically about twice
