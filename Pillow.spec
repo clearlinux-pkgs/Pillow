@@ -4,12 +4,12 @@
 #
 Name     : Pillow
 Version  : 3.4.2
-Release  : 24
+Release  : 25
 URL      : http://pypi.debian.net/Pillow/Pillow-3.4.2.tar.gz
 Source0  : http://pypi.debian.net/Pillow/Pillow-3.4.2.tar.gz
 Summary  : Python Imaging Library (Fork)
 Group    : Development/Tools
-License  : MIT
+License  : HPND MIT
 Requires: Pillow-bin
 Requires: Pillow-python
 BuildRequires : Sphinx-python
