@@ -4,7 +4,7 @@
 #
 Name     : Pillow
 Version  : 3.4.2
-Release  : 30
+Release  : 31
 URL      : http://pypi.debian.net/Pillow/Pillow-3.4.2.tar.gz
 Source0  : http://pypi.debian.net/Pillow/Pillow-3.4.2.tar.gz
 Summary  : Python Imaging Library (Fork)
@@ -28,16 +28,13 @@ Requires: pytz
 Requires: requests
 Requires: six
 Requires: snowballstemmer
-BuildRequires : Sphinx-python
 BuildRequires : freetype-dev
 BuildRequires : libjpeg-turbo-dev
 BuildRequires : nose
 BuildRequires : nose-python
 BuildRequires : pbr
-BuildRequires : pep8
 BuildRequires : pip
 BuildRequires : pkgconfig(zlib)
-BuildRequires : pyflakes-python
 BuildRequires : python-dev
 BuildRequires : python3-dev
 BuildRequires : setuptools
@@ -71,17 +68,12 @@ python components for the Pillow package.
 
 %build
 export LANG=C
-export SOURCE_DATE_EPOCH=1489025283
+export SOURCE_DATE_EPOCH=1489353740
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
-%check
-export http_proxy=http://127.0.0.1:9/
-export https_proxy=http://127.0.0.1:9/
-export no_proxy=localhost,127.0.0.1,0.0.0.0
-PYTHONPATH=%{buildroot}/usr/lib/python2.7/site-packages python2 setup.py test || :
 %install
-export SOURCE_DATE_EPOCH=1489025283
+export SOURCE_DATE_EPOCH=1489353740
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force

@@ -5,6 +5,3 @@ pkgconfig(zlib)
 freetype-dev
 nose
 nose-python
-Sphinx-python
-pyflakes-python
-pep8
