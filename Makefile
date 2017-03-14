@@ -1,5 +1,5 @@
 PKG_NAME := Pillow
-URL := http://pypi.debian.net/Pillow/Pillow-3.4.2.tar.gz
+URL := http://pypi.debian.net/Pillow/Pillow-4.0.0.tar.gz
 
 
 include ../common/Makefile.common
