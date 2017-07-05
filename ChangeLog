@@ -1,6 +1,135 @@
 Changelog (Pillow)
 ==================
 
+4.2.0 (2017-07-01)
+------------------
+
+- Doc: Clarified Image.save:append_images documentation #2604
+  [radarhere]
+
+- CI: Amazon Linux and Centos6 docker images added to TravisCI #2585
+  [wiredfool]
+  
+- Image.alpha_composite added #2595
+  [wiredfool]
+  
+- Complex Text Support #2576
+  [ShamsaHamed, Fahad-Alsaidi, wiredfool]
+  
+- Added threshold parameter to ImageDraw.floodfill #2599
+  [nediamond]
+
+- Added dBATCH parameter to ghostscript command #2588
+  [radarhere]
+
+- JPEG: Adjust buffer size when icc_profile > MAXBLOCK #2596
+  [Darou]
+
+- Specify Pillow Version in one place #2517
+  [wiredfool]
+  
+- CI: Change the owner of the TRAVIS_BUILD_DIR, fixing broken docker runs #2587
+  [wiredfool]
+
+- Fix truncated PNG loading for some images, Fix memory leak on truncated PNG images. #2541, #2598
+  [homm]
+  
+- Add decompression bomb check to Image.crop #2410
+  [wiredfool]
+
+- ImageFile: Ensure that the `err_code` variable is initialized in case of exception. #2363
+  [alexkiro]
+  
+- Tiff: Support append_images for saving multipage TIFFs #2406
+  [blochl]
+
+- Doc: Clarify that draft is only implemented for JPEG and PCD #2409
+  [wiredfool]
+
+- Test: MicImagePlugin #2447
+  [hugovk]
+
+- Use round() instead of floor() to eliminate zero coefficients in resample #2558
+  [homm]
+
+- Remove deprecated code #2549
+  [hugovk]
+  
+- Added append_images to PDF saving #2526
+  [radarhere]
+ 
+- Remove unused function core image function new_array #2548
+  [hugovk]
+
+- Remove unnecessary calls to dict.keys() #2551
+  [jdufresne]
+  
+- Add more ImageDraw.py tests and remove unused Draw.c code #2533
+  [hugovk]
+
+- Test: More tests for ImageMorph #2554
+  [hugovk]
+
+- Test: McIDAS area file #2552
+  [radarhere]
+
+- Update Feature Detection #2520
+  [wiredfool]
+
+- CI: Update pypy on TravisCI #2573
+  [hugovk]
+
+- ImageMorph: Fix wrong expected size of MRLs read from disk #2561
+  [dov]
+
+- Docs: Update install docs for FreeBSD #2546
+  [wiredfool]
+
+- Build: Ignore OpenJpeg 1.5 on FreeBSD #2544
+  [melvyn-sopacua]
+
+- Remove 'not yet implemented' methods from PIL 1.1.4 #2538
+  [hugovk]
+  
+- Dependencies: Update FreeType to 2.8, LibTIFF to 4.0.8 and libimagequant to 2.9.1 #2535 #2537 #2540
+  [radarhere]
+
+- Raise TypeError and not also UnboundLocalError in ImageFile.Parser() #2525
+  [joshblum]
+
+- Test: Use Codecov for coverage #2528
+  [hugovk]
+
+- Use PNG for Image.show() #2527
+  [HinTak, wiredfool]
+
+- Remove WITH_DEBUG compilation flag #2522
+  [wiredfool]
+
+- Fix return value on parameter parse error in _webp.c #2521
+  [adw1n]
+
+- Set executable flag on scripts with shebang line #2295
+  [radarhere]
+
+- Flake8 #2460
+  [radarhere]
+
+- Doc: Release Process Changes #2516
+  [wiredfool]
+
+- CI: Added region for s3 deployment on appveyor #2515
+  [wiredfool]
+
+- Doc: Updated references to point to existing files #2507
+  [radarhere]
+
+- Return copy on Image crop if crop dimensions match the image #2471
+  [radarhere]
+
+- Test: Optimize CI speed #2464, #2466
+  [hugovk]
+
 4.1.1 (2017-04-28)
 ------------------
 
@@ -15,7 +144,6 @@ Changelog (Pillow)
 
 - Docs: Fixed rst syntax error #2477
   [thebjorn]
-
 
 4.1.0 (2017-04-03)
 ------------------
@@ -34,7 +162,7 @@ Changelog (Pillow)
 
 - Git: Set ContainerIO test file as binary #2469
   [cgohlke]
-  
+
 - Remove superfluous import of FixTk #2455
   [cgohlke)
 
@@ -43,7 +171,7 @@ Changelog (Pillow)
 
 - Pure Python Decoders, including Python decoder to fix for MSP images #1938
   [wiredfool, hugovk]
-  
+
 - Reorganized GifImagePlugin, fixes #2314.  #2374
   [radarhere, wiredfool]
 
@@ -52,10 +180,10 @@ Changelog (Pillow)
 
 - Test: Additional tests for BurfStub, Eps, Container, GribStub, IPTC, Wmf, XVThumb, ImageDraw, ImageMorph ImageShow #2425
   [radarhere]
- 
+
 - Health fixes #2437
   [radarhere]
-  
+
 - Test: Correctness tests ContainerIO, XVThumbImagePlugin, BufrStubImagePlugin, GribStubImagePlugin, FitsStubImagePlugin, Hdf5StubImagePlugin, PixarImageFile, PsdImageFile #2443, #2442, #2441, #2440, #2431, #2430, #2428, #2427
   [hugovk]
 
@@ -2521,7 +2649,7 @@ Pre-fork
 
         import numpy, Image
 
-        im = Image.open('lena.jpg')
+        im = Image.open('hopper.jpg')
 
         a = numpy.asarray(im) # a is readonly
 
@@ -3364,7 +3492,7 @@ Pre-fork
       to any other format, via a lookup table.  That table should
       contain 256 values for each band in the output image.
 
-    + Some file drivers (including FLI/FLC, GIF, and IM) accidently
+    + Some file drivers (including FLI/FLC, GIF, and IM) accidentally
       overwrote the offset method with an internal attribute.  All
       drivers have been updated to use private attributes where
       possible.
