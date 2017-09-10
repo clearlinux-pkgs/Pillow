@@ -4,13 +4,14 @@
 #
 Name     : Pillow
 Version  : 4.2.1
-Release  : 37
+Release  : 38
 URL      : http://pypi.debian.net/Pillow/Pillow-4.2.1.tar.gz
 Source0  : http://pypi.debian.net/Pillow/Pillow-4.2.1.tar.gz
 Summary  : Python Imaging Library (Fork)
 Group    : Development/Tools
-License  : HPND
+License  : HPND OFL-1.1
 Requires: Pillow-bin
+Requires: Pillow-legacypython
 Requires: Pillow-python
 Requires: Babel
 Requires: MarkupSafe
@@ -38,11 +39,10 @@ BuildRequires : python3-dev
 BuildRequires : setuptools
 
 %description
-Pillow
 ======
-Python Imaging Library (Fork)
------------------------------
-Pillow is the friendly PIL fork by `Alex Clark and Contributors <https://github.com/python-pillow/Pillow/graphs/contributors>`_. PIL is the Python Imaging Library by Fredrik Lundh and Contributors.
+        
+        Python Imaging Library (Fork)
+        -----------------------------
 
 %package bin
 Summary: bin components for the Pillow package.
@@ -52,9 +52,18 @@ Group: Binaries
 bin components for the Pillow package.
 
 
+%package legacypython
+Summary: legacypython components for the Pillow package.
+Group: Default
+
+%description legacypython
+legacypython components for the Pillow package.
+
+
 %package python
 Summary: python components for the Pillow package.
 Group: Default
+Requires: Pillow-legacypython
 Provides: pillow-python
 
 %description python
@@ -69,12 +78,12 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1499410336
+export SOURCE_DATE_EPOCH=1505055749
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
 %install
-export SOURCE_DATE_EPOCH=1499410336
+export SOURCE_DATE_EPOCH=1505055749
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
@@ -101,7 +110,10 @@ echo ----[ mark ]----
 /usr/bin/thresholder.py
 /usr/bin/viewer.py
 
-%files python
+%files legacypython
 %defattr(-,root,root,-)
 /usr/lib/python2*/*
+
+%files python
+%defattr(-,root,root,-)
 /usr/lib/python3*/*
