@@ -4,7 +4,7 @@
 #
 Name     : Pillow
 Version  : 4.3.0
-Release  : 41
+Release  : 42
 URL      : http://pypi.debian.net/Pillow/Pillow-4.3.0.tar.gz
 Source0  : http://pypi.debian.net/Pillow/Pillow-4.3.0.tar.gz
 Summary  : Python Imaging Library (Fork)
