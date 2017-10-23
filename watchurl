@@ -1,3 +1,0 @@
-# openstack Liberty needs version >= 2.4.0 < 3.0.0
-# for more information check https://github.com/openstack/requirements/blob/stable/liberty/global-requirements.txt
-watchurl=https://pypi.python.org/simple/pillow/ ../../packages/source/P/Pillow/Pillow-(2[\d\.]*).tar.gz
