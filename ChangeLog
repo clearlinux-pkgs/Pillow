@@ -1,5 +1,159 @@
+
 Changelog (Pillow)
 ==================
+
+5.0.0 (2018-01-01)
+------------------
+
+- Docs: Added docstrings from documentation #2914
+  [radarhere]
+
+- Test: Switch from nose to pytest #2815
+  [hugovk]
+
+- Rework Source directory layout, preventing accidental import of PIL. #2911
+  [wiredfool]
+
+- Dynamically link libraqm #2753
+  [wiredfool]
+  
+- Removed scripts directory #2901
+  [wiredfool]
+  
+- TIFF: Run all compressed tiffs through libtiff decoder #2899
+  [wiredfool]
+  
+- GIF: Add disposal option when saving GIFs #2902
+  [linnil1, wiredfool]
+
+- EPS: Allow for an empty line in EPS header data #2903
+  [radarhere]
+
+- PNG: Add support for sRGB and cHRM chunks, permit sRGB when no iCCP chunk present #2898
+  [wiredfool]
+
+- Dependencies: Update Tk Tcl to 8.6.8 #2905
+  [radarhere]
+
+- Decompression bomb error now raised for images 2x larger than a decompression bomb warning #2583
+  [wiredfool]
+
+- Test: avoid random failure in test_effect_noise #2894
+  [hugovk]  
+
+- Increased epsilon for test_file_eps.py:test_showpage due to Arch update. #2896
+  [wiredfool]
+
+- Removed check parameter from _save in BmpImagePlugin, PngImagePlugin, ImImagePlugin, PalmImagePlugin, and PcxImagePlugin. #2873
+  [radarhere]
+
+- Make PngImagePlugin.add_text() zip argument type bool #2890
+  [jdufresne]
+
+- Depends: Updated libwebp to 0.6.1 #2880
+  [radarhere]
+
+- Remove unnecessary bool() calls in Image.registered_extensions and skipKnownBadTests #2891
+  [jdufresne]
+
+- Fix count of BITSPERSAMPLE items in broken TIFF files #2883
+  [homm]
+
+- Fillcolor parameter for Image.Transform #2852
+  [wiredfool]
+
+- Test: Display differences for test failures #2862
+  [wiredfool]
+
+- Added executable flag to file with shebang line #2884
+  [radarhere]
+
+- Setup: Specify compatible Python versions for pip #2877
+  [hugovk]
+
+- Dependencies: Updated libimagequant to 2.11.4 #2878
+  [radarhere]
+
+- Setup: Warn if trying to install for Py3.7 on Windows #2855
+  [hugovk]
+
+- Doc: Fonts can be loaded from a file-like object, not just filename #2861
+  [robin-norwood]
+
+- Add eog support for Ubuntu Image Viewer #2864
+  [NafisFaysal]
+
+- Test: Test on 3.7-dev on Travis.ci #2870
+  [hugovk]
+
+- Dependencies: Update libtiff to 4.0.9 #2871
+  [radarhere]
+
+- Setup: Replace deprecated platform.dist with file existence check #2869
+  [wiredfool]
+
+- Build: Fix setup.py on Debian #2853
+  [wiredfool]
+
+- Docs: Correct error in ImageDraw documentation #2858
+  [meribold]
+
+- Test: Drop Ubuntu Precise, Fedora 24, Fedora 25, add Fedora 27, Centos 7, Amazon v2 CI Support #2854, #2843, #2895, #2897
+  [wiredfool]
+
+- Dependencies: Updated libimagequant to 2.11.3 #2849
+  [radarhere]
+
+- Test: Fix test_image.py to use tempfile #2841
+  [radarhere]
+
+- Replace PIL.OleFileIO deprecation warning with descriptive ImportError #2833
+  [hugovk]
+
+- WebP: Add support for animated WebP files #2761
+  [jd20]
+
+- PDF: Set encoderinfo for images when saving multi-page PDF. Fixes #2804. #2805
+  [ixio]
+
+- Allow the olefile dependency to be optional #2789
+  [jdufresne]
+
+- GIF: Permit LZW code lengths up to 12 bits in GIF decode #2813
+  [wiredfool]
+
+- Fix unterminiated string and unchecked exception in _font_text_asBytes. #2825
+  [wiredfool]
+
+- PPM: Use fixed list of whitespace, rather relying on locale, fixes #272. #2831
+  [markmiscavage]
+
+- Added support for generators when using append_images #2829, #2835
+  [radarhere]
+
+- Doc: Correct PixelAccess.rst #2824
+  [hasahmed]
+
+- Depends: Update raqm to 0.3.0 #2822
+  [radarhere]
+
+- Docs: Link to maintained version of aggdraw #2809
+  [hugovk]
+
+- Include license file in the generated wheel packages #2801
+  [jdufresne]
+
+- Depends: Update openjpeg to 2.3.0 #2791
+  [radarhere]
+
+- Add option to Makefile to build and install with C coverage #2781
+  [hugovk]
+
+- Add context manager support to ImageFile.Parser and PngImagePlugin.ChunkStream #2793
+  [radarhere]
+
+- ImageDraw.textsize: fix zero length error #2788
+  [wiredfool, hugovk]
 
 4.3.0 (2017-10-02)
 ------------------
@@ -12,7 +166,7 @@ Changelog (Pillow)
 
 - Use correct Windows handle type on 64 bit in imagingcms  #2774
   [cgohlke]
-  
+
 - 64 Bit Windows fix for block storage #2773
   [cgohlke]
 
