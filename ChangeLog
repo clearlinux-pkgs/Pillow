@@ -2,6 +2,102 @@
 Changelog (Pillow)
 ==================
 
+5.1.0 (2018-04-02)
+------------------
+
+- Close fp before return in ImagingSavePPM #3061
+  [kathryndavies]
+
+- Added documentation for ICNS append_images #3051
+  [radarhere]
+
+- Docs: Move intro text below its header #3021
+  [hugovk]
+
+- CI: Rename appveyor.yml as .appveyor.yml #2978
+  [hugovk]
+
+- Fix TypeError for JPEG2000 parser feed #3042
+  [hugovk]
+
+- Certain corrupted jpegs can result in no data read #3023
+  [kkopachev]
+
+- Add support for BLP file format #3007
+  [jleclanche]
+
+- Simplify version checks #2998
+  [hugovk]
+
+- Fix "invalid escape sequence" warning on Python 3.6+ #2996
+  [timgraham]
+
+- Allow append_images to set .icns scaled images #3005
+  [radarhere]
+
+- Support appending to existing PDFs #2965
+  [vashek]
+
+- Fix and improve efficient saving of ICNS on macOS #3004
+  [radarhere]
+
+- Build: Enable pip cache in AppVeyor build #3009
+  [thijstriemstra]
+
+- Trim trailing whitespace #2985
+  [Metallicow]
+
+- Docs: Correct reference to Image.new method #3000
+  [radarhere]
+
+- Rearrange ImageFilter classes into alphabetical order #2990
+  [radarhere]
+
+- Test: Remove duplicate line #2983
+  [radarhere]
+
+- Build: Update AppVeyor PyPy version #3003
+  [radarhere]
+
+- Tiff: Open 8 bit Tiffs with 5 or 6 channels, discarding extra channels #2938
+  [homm]
+
+- Readme: Added Twitter badge #2930
+  [hugovk]
+
+- Removed __main__ code from ImageCms #2942
+  [radarhere]
+
+- Test: Changed assert statements to unittest calls #2961
+  [radarhere]
+
+- Depends: Update libimagequant to 2.11.10, raqm to 0.5.0, freetype to 2.9 #3036, #3017, #2957
+  [radarhere]
+
+- Remove _imaging.crc32 in favor of builtin Python crc32 implementation #2935
+  [wiredfool]
+
+- Move Tk directory to src directory #2928
+  [hugovk]
+
+- Enable pip cache in Travis CI #2933
+  [jdufresne]
+
+- Remove unused and duplicate imports #2927
+  [radarhere]
+
+- Docs: Changed documentation references to 2.x to 2.7 #2921
+  [radarhere]
+
+- Fix memory leak when opening webp files #2974
+  [wiredfool]
+
+- Setup: Fix "TypeError: 'NoneType' object is not iterable" for PPC and CRUX #2951
+  [hugovk]
+
+- Setup: Add libdirs for ppc64le and armv7l #2968
+  [nehaljwani]
+
 5.0.0 (2018-01-01)
 ------------------
 
@@ -16,13 +112,13 @@ Changelog (Pillow)
 
 - Dynamically link libraqm #2753
   [wiredfool]
-  
+
 - Removed scripts directory #2901
   [wiredfool]
-  
+
 - TIFF: Run all compressed tiffs through libtiff decoder #2899
   [wiredfool]
-  
+
 - GIF: Add disposal option when saving GIFs #2902
   [linnil1, wiredfool]
 
@@ -39,7 +135,7 @@ Changelog (Pillow)
   [wiredfool]
 
 - Test: avoid random failure in test_effect_noise #2894
-  [hugovk]  
+  [hugovk]
 
 - Increased epsilon for test_file_eps.py:test_showpage due to Arch update. #2896
   [wiredfool]
@@ -122,7 +218,7 @@ Changelog (Pillow)
 - GIF: Permit LZW code lengths up to 12 bits in GIF decode #2813
   [wiredfool]
 
-- Fix unterminiated string and unchecked exception in _font_text_asBytes. #2825
+- Fix unterminated string and unchecked exception in _font_text_asBytes. #2825
   [wiredfool]
 
 - PPM: Use fixed list of whitespace, rather relying on locale, fixes #272. #2831
@@ -575,7 +671,7 @@ Changelog (Pillow)
 - Doc: Reordered operating systems in Compatibility Matrix #2436
   [radarhere]
 
-- Test: Additional tests for BurfStub, Eps, Container, GribStub, IPTC, Wmf, XVThumb, ImageDraw, ImageMorph ImageShow #2425
+- Test: Additional tests for BufrStub, Eps, Container, GribStub, IPTC, Wmf, XVThumb, ImageDraw, ImageMorph, ImageShow #2425
   [radarhere]
 
 - Health fixes #2437
