@@ -4,13 +4,12 @@
 #
 Name     : Pillow
 Version  : 5.1.0
-Release  : 47
+Release  : 48
 URL      : https://pypi.python.org/packages/89/b8/2f49bf71cbd0e9485bb36f72d438421b69b7356180695ae10bd4fd3066f5/Pillow-5.1.0.tar.gz
 Source0  : https://pypi.python.org/packages/89/b8/2f49bf71cbd0e9485bb36f72d438421b69b7356180695ae10bd4fd3066f5/Pillow-5.1.0.tar.gz
 Summary  : Python Imaging Library (Fork)
 Group    : Development/Tools
 License  : NTP OFL-1.1
-Requires: Pillow-legacypython
 Requires: Pillow-python3
 Requires: Pillow-python
 Requires: Babel
@@ -46,15 +45,6 @@ BuildRequires : setuptools-legacypython
         Python Imaging Library (Fork)
         -----------------------------
 
-%package legacypython
-Summary: legacypython components for the Pillow package.
-Group: Default
-Requires: python-core
-
-%description legacypython
-legacypython components for the Pillow package.
-
-
 %package python
 Summary: python components for the Pillow package.
 Group: Default
@@ -82,25 +72,18 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1522708016
-python2 setup.py build -b py2
+export SOURCE_DATE_EPOCH=1523297513
 python3 setup.py build -b py3
 
 %install
-export SOURCE_DATE_EPOCH=1522708016
 rm -rf %{buildroot}
-python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
-python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
+python3 -tt setup.py build -b py3 install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
 echo ----[ mark ]----
 
 %files
 %defattr(-,root,root,-)
-
-%files legacypython
-%defattr(-,root,root,-)
-/usr/lib/python2*/*
 
 %files python
 %defattr(-,root,root,-)
