@@ -4,7 +4,7 @@
 #
 Name     : Pillow
 Version  : 5.1.0
-Release  : 51
+Release  : 52
 URL      : https://pypi.python.org/packages/89/b8/2f49bf71cbd0e9485bb36f72d438421b69b7356180695ae10bd4fd3066f5/Pillow-5.1.0.tar.gz
 Source0  : https://pypi.python.org/packages/89/b8/2f49bf71cbd0e9485bb36f72d438421b69b7356180695ae10bd4fd3066f5/Pillow-5.1.0.tar.gz
 Summary  : Python Imaging Library (Fork)
@@ -17,12 +17,9 @@ Requires: MarkupSafe
 Requires: Pygments
 Requires: alabaster
 Requires: cov-core
-Requires: coverage
 Requires: olefile
 Requires: pycodestyle
 Requires: pyflakes
-Requires: pytest
-Requires: pytest-cov
 Requires: pytz
 Requires: requests
 Requires: six
@@ -71,7 +68,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1523554737
+export SOURCE_DATE_EPOCH=1528565173
 python3 setup.py build -b py3
 
 %install

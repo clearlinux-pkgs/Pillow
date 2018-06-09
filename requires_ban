@@ -4,3 +4,6 @@ Jinja2
 pep8
 docutils
 Sphinx
+pytest-cov
+pytest
+coverage
