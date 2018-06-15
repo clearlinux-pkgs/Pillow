@@ -4,7 +4,7 @@
 #
 Name     : Pillow
 Version  : 5.1.0
-Release  : 52
+Release  : 53
 URL      : https://pypi.python.org/packages/89/b8/2f49bf71cbd0e9485bb36f72d438421b69b7356180695ae10bd4fd3066f5/Pillow-5.1.0.tar.gz
 Source0  : https://pypi.python.org/packages/89/b8/2f49bf71cbd0e9485bb36f72d438421b69b7356180695ae10bd4fd3066f5/Pillow-5.1.0.tar.gz
 Summary  : Python Imaging Library (Fork)
