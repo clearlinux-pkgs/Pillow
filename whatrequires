@@ -1,4 +1,6 @@
 # This file contains recursive sources that require this package
+Django
 fwupd
+reportlab
 scikit-image
 tflearn
