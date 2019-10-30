@@ -1,6 +1,16 @@
 # This file contains recursive sources that require this package
 Django
+Keras_Preprocessing
+bokeh
+dldt
+dldt-model-optimizer
+fontforge
 fwupd
+imageio
+lutris
+open_model_zoo
 reportlab
 scikit-image
+scikit-learn
+scipy
 tflearn

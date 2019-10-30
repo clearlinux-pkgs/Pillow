@@ -1,0 +1,31 @@
+From 9939291219dcdd7b16992843857ef54d8a7cd528 Mon Sep 17 00:00:00 2001
+From: "Anselmo L. S. Melo" <anselmo.melo@intel.com>
+Date: Thu, 31 Oct 2019 13:03:30 -0700
+Subject: [PATCH] Fix build: Add default libdir
+
+setup.py uses multiple ways to find build dependencies. pkg-config does
+find libs like zlib, but it stores the result of '--libs-only-L' which
+is empty for system libraries in the default library dir on Clear.
+It manages to find libs in /usr/lib64 using ldconfig -p output. This works
+when executed on a regular CL system, however it does not work as expected
+when executed in the package build chroot.
+
+---
+ setup.py | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/setup.py b/setup.py
+index d54e30d..12e2ec7 100755
+--- a/setup.py
++++ b/setup.py
+@@ -511,6 +511,7 @@ class pil_build_ext(build_ext):
+             _add_directory(include_dirs, "/usr/local/include")
+ 
+             _add_directory(library_dirs, "/usr/lib")
++            _add_directory(library_dirs, "/usr/lib64")
+             _add_directory(include_dirs, "/usr/include")
+             # alpine, at least
+             _add_directory(library_dirs, "/lib")
+-- 
+2.23.0
+
