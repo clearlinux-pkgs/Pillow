@@ -1,6 +1,7 @@
 # This file contains recursive sources that require this package
 Django
 Keras_Preprocessing
+blockdiag
 bokeh
 dldt
 dldt-model-optimizer
