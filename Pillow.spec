@@ -4,7 +4,7 @@
 #
 Name     : Pillow
 Version  : 6.2.2
-Release  : 64
+Release  : 65
 URL      : https://files.pythonhosted.org/packages/b3/d0/a20d8440b71adfbf133452d4f6e0fe80de2df7c2578c9b498fb812083383/Pillow-6.2.2.tar.gz
 Source0  : https://files.pythonhosted.org/packages/b3/d0/a20d8440b71adfbf133452d4f6e0fe80de2df7c2578c9b498fb812083383/Pillow-6.2.2.tar.gz
 Summary  : Python Imaging Library (Fork)
@@ -31,6 +31,7 @@ BuildRequires : pkgconfig(zlib)
 BuildRequires : pycodestyle
 BuildRequires : pyflakes
 BuildRequires : pyroma
+BuildRequires : zlib-dev
 Patch1: Fix-build-libdir.patch
 
 %description
@@ -61,6 +62,7 @@ python components for the Pillow package.
 Summary: python3 components for the Pillow package.
 Group: Default
 Requires: python3-core
+Provides: pypi(pillow)
 
 %description python3
 python3 components for the Pillow package.
@@ -76,7 +78,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1578079517
+export SOURCE_DATE_EPOCH=1583702079
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$CFLAGS -fno-lto "
