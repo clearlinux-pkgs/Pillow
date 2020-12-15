@@ -4,7 +4,7 @@
 #
 Name     : Pillow
 Version  : 7.1.2
-Release  : 66
+Release  : 67
 URL      : https://files.pythonhosted.org/packages/ce/ef/e793f6ffe245c960c42492d0bb50f8d14e2ba223f1922a5c3c81569cec44/Pillow-7.1.2.tar.gz
 Source0  : https://files.pythonhosted.org/packages/ce/ef/e793f6ffe245c960c42492d0bb50f8d14e2ba223f1922a5c3c81569cec44/Pillow-7.1.2.tar.gz
 Summary  : Python Imaging Library (Fork)
