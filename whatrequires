@@ -8,6 +8,7 @@ fontforge
 fwupd
 imageio
 lutris
+matplotlib
 open_model_zoo
 reportlab
 scikit-image
