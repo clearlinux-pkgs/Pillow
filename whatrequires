@@ -6,11 +6,11 @@ bokeh
 click
 fontforge
 fwupd
+gst-python
 imageio
 lutris
 matplotlib
 open_model_zoo
 reportlab
 scikit-image
-scipy
 tflearn
