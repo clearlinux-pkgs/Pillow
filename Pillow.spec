@@ -4,7 +4,7 @@
 #
 Name     : Pillow
 Version  : 8.3.1
-Release  : 78
+Release  : 79
 URL      : https://files.pythonhosted.org/packages/8f/7d/1e9c2d8989c209edfd10f878da1af956059a1caab498e5bc34fa11b83f71/Pillow-8.3.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/8f/7d/1e9c2d8989c209edfd10f878da1af956059a1caab498e5bc34fa11b83f71/Pillow-8.3.1.tar.gz
 Summary  : Python Imaging Library (Fork)
